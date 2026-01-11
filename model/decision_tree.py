@@ -32,13 +32,15 @@ dctr_model.fit(X_train_scaled, y_train)
 y_pred_dctr = dctr_model.predict(X_test_scaled)
 y_prob_dctr = dctr_model.predict_proba(X_test_scaled)[:, 1]
 
+# Evaluatethe performance
 accuracy_dctr = accuracy_score(y_test, y_pred_dctr)
 precision_dctr = precision_score(y_test, y_pred_dctr)
 recall_dctr = recall_score(y_test, y_pred_dctr)
 f1_dctr = f1_score(y_test, y_pred_dctr)
 auc_dctr = roc_auc_score(y_test, y_prob_dctr)
-mcc_dctr = matthews_corrcoef(y_test, y_pred_dt)
+mcc_dctr = matthews_corrcoef(y_test, y_pred_dctr)
 
+# Display performance 
 print("Decision Tree Classifier Performance:")
 print(f"Accuracy  : {accuracy_dctr:.4f}")
 print(f"Precision : {precision_dctr:.4f}")
