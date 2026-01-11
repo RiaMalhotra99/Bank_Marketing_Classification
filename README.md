@@ -48,3 +48,14 @@ Matthews Correlation Coefficient (MCC)
 | Naive Bayes | 0.8298 | 0.7899 | 0.3214 | 0.4327 | 0.3689 | 0.2770 |
 | Random Forest | 0.8884 | 0.8907 | 0.5306 | 0.2500| 0.3399 | 0.3119 |
 | XGBoost | 0.8928 | 0.9021 | 0.5467 |  0.3942 | 0.4581 | 0.4069 |
+
+**Observations on the Performance of each Model** :
+
+ Model | Observation |
+|------|-------------|
+| Logistic Regression | This model showed strong overall accuracy and AUC, but the recall value was low, meaning many actual positive cases were not correctly identified. |
+| Decision Tree | This model provided fairly balanced precision and recall, but its lower AUC suggests that it does not generalize as well as ensemble-based methods. |
+| KNN | It achieved good accuracy, but it struggled to correctly detect positive instances, resulting in low recall and F1 score despite using scaled features. |
+| Naive Bayes | This model was able to capture more positive cases compared to some models, but its precision was lower, indicating a higher number of false positives. |
+| Random Forest | It performed better than a single decision tree and achieved high accuracy and AUC, although recall for the minority class was still limited. |
+| XGBoost | It produced the most consistent results across metrics, with the highest AUC, F1 score, and MCC, making it the best-performing model in this comparison. |
