@@ -6,7 +6,7 @@ from sklearn.metrics import f1_score, roc_auc_score, matthews_corrcoef
 
 data = pd.read_csv("data/bank.csv", sep=';')
 data.head()
-y=dataset['y']
+y=data['y']
 X=data.drop('y', axis=1)
 y=y.map({'no': 0, 'yes': 1})
 
